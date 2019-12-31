@@ -10,14 +10,14 @@ using Newtonsoft.Json;
 
 namespace GithubMonitor_AzureFunction
 {
-    public static class Function1
+    public static class GitHubMonitor
     {
-        [FunctionName("Function1")]
+        [FunctionName("GitHubMonitor")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("our github monitor processed an action");
 
             string name = req.Query["name"];
 
